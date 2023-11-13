@@ -38,7 +38,7 @@ conda activate vividtalker
 pip install -r requirements.txt
 ```
 
-IMPORTANT: After installing torch, please make sure to modify the `site-packages/torch/nn/modules/conv.py` file by commenting out the `self.padding_mode != 'zeros'` line to allow for replicated padding for ConvTranspose1d as shown [here](https://github.com/NVIDIA/tacotron2/issues/182). 
+
 
 
 
