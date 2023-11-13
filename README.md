@@ -12,35 +12,30 @@ This codebase provides:
 - dataset
 - checkpoints
 
-The main sections are:
-- Overview
-- Instalation
-- Download Data and Models
-- Training from Scratch
-- Testing with Pretrained Models
-- visualization code for rendering
+<p align="center">
+<img src="architecture.png" width="75%"/>
+</p>
 
-# Overview:
-We provide models and code to train and test our listener motion models.
+## **Environment**
+- Linux
+- Python 3.7+
+- Pytorch 1.10.0
+- CUDA 11.7 
 
-See below for sections:
-- **Installation**: environment setup and installation for visualization
-- **Download data and models**: download annotations and pre-trained models
-- **Training from scratch**: scripts to get the training pipeline running from scratch
-- **Testing with pretrianed models**: scripts to test pretrained models and save output motion parameters
+Other necessary packages:
+```
+pip install -r requirements.txt
+```
+
 
 ## Installation:
-Tested with cuda/9.0, cudnn/v7.0-cuda.9.0, and python 3.6.11
+python 3.7.11
 
 ```
-git clone git@github.com:evonneng/learning2listen.git
-
 cd Vividtalker/src/
-conda create -n vividtalker python=3.6
-conda activate venv_l2l
+conda create -n vividtalker python=3.7
+conda activate vividtalker
 pip install -r requirements.txt
-
-export L2L_PATH=`pwd`
 ```
 
 IMPORTANT: After installing torch, please make sure to modify the `site-packages/torch/nn/modules/conv.py` file by commenting out the `self.padding_mode != 'zeros'` line to allow for replicated padding for ConvTranspose1d as shown [here](https://github.com/NVIDIA/tacotron2/issues/182). 
@@ -62,7 +57,7 @@ sh train_exp.sh
 cd src
 sh train_decoder.sh
 ```
-# Testing with Pretrained Models:
+# Testing:
 
 ```
 sh test.sh
