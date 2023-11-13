@@ -1,0 +1,1 @@
+python ./src/vqgan/train_vq_transformer_pose.py --config ./src/vqgan/configs/trevor_pose.json --pose

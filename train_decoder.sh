@@ -1,0 +1,1 @@
+python -u ./train_vq_decoder.py --config ./src/configs/vq/decode.json
