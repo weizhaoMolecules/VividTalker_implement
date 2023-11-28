@@ -38,7 +38,8 @@ conda activate vividtalker
 pip install -r requirements.txt
 ```
 
-
+# 3D-VTFSET
+https://drive.google.com/file/d/120EXgiqPrYP2ZjNq59ETwhbQdy_7wPmQ/view?usp=drive_link
 
 
 
